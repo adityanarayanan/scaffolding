@@ -1,5 +1,6 @@
 
-*Spring Boilerplate
+Spring Boilerplate
+
 * Architecture
 ** HTML5/JavaScript Front end communicating with backend using REST
 ** Spring MVC/Servlet based backend hosted on Tomcat 7
