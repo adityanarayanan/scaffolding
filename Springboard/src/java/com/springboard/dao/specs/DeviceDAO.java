@@ -6,7 +6,7 @@ import com.springboard.entities.Device;
 
 public interface DeviceDAO extends GenericDAO<Device, Long> {
 	
-	public Device findByUniqueId(String uniqueId);
+	public Device findByUniqueIdentifier(String uniqueIdentifier);
 	
 	public List<Device> findDevicesByType(String type);
 	

@@ -2,8 +2,10 @@ package com.springboard.entities;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -24,7 +26,7 @@ public class AppUser {
 	@Column(name = "password")
 	private String password;
 	
-	@OneToMany(mappedBy = "appusers")
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "owner", cascade = CascadeType.ALL)
 	private Set<Device> devices;
 	
 	public AppUser() { }

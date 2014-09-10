@@ -10,9 +10,9 @@ import com.springboard.entities.Device;
 public class DeviceDAOImpl extends GenericDAOImpl<Device, Long> implements DeviceDAO {
 	
 	@Override
-	public Device findByUniqueId(String uniqueId) {
-		String hql = "SELECT device FROM Device AS device WHERE device.uniqueId = :uniqueId";
-		Query query = getSession().createQuery(hql).setParameter("uniqueId", uniqueId);
+	public Device findByUniqueIdentifier(String uniqueIdentifier) {
+		String hql = "SELECT device FROM Device AS device WHERE device.uniqueIdentifier = :uniqueIdentifier";
+		Query query = getSession().createQuery(hql).setParameter("uniqueIdentifier", uniqueIdentifier);
 		return findOne(query);
 	}
 	

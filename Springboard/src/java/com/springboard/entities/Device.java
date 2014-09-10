@@ -18,7 +18,7 @@ public class Device {
 	private Long id;
 	
 	@Column(name = "unique_id")
-	private String uniqueId;
+	private String uniqueIdentifier;
 	
 	@Column(name = "type")
 	private String type;
@@ -29,8 +29,8 @@ public class Device {
 	
 	public Device() { }
 	
-	public Device(String uniqueId, String type, AppUser owner) {
-		this.uniqueId = uniqueId;
+	public Device(String uniqueIdentifier, String type, AppUser owner) {
+		this.uniqueIdentifier = uniqueIdentifier;
 		this.type = type;
 		this.owner = owner;
 	}
@@ -43,12 +43,12 @@ public class Device {
 		this.id = id;
 	}
 
-	public String getUniqueId() {
-		return uniqueId;
+	public String getUniqueIdentifier() {
+		return uniqueIdentifier;
 	}
 
-	public void setUniqueId(String uniqueId) {
-		this.uniqueId = uniqueId;
+	public void setUniqueIdentifer(String uniqueIdentifier) {
+		this.uniqueIdentifier = uniqueIdentifier;
 	}
 
 	public String getType() {
@@ -81,7 +81,7 @@ public class Device {
 	
 	@Override
 	public String toString() {
-		String description = "\nDevice Entity:" + "\nId: " + id + "\nUnique Identifier: " + uniqueId
+		String description = "\nDevice Entity:" + "\nId: " + id + "\nUnique Identifier: " + uniqueIdentifier
 				+ "\nDevice Type: " + type + "\n";
 		return description;
 	}
