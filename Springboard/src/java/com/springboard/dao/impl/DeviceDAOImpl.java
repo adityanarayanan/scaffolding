@@ -3,10 +3,12 @@ package com.springboard.dao.impl;
 import java.util.List;
 
 import org.hibernate.Query;
+import org.springframework.stereotype.Component;
 
 import com.springboard.dao.specs.DeviceDAO;
 import com.springboard.entities.Device;
 
+@Component
 public class DeviceDAOImpl extends GenericDAOImpl<Device, Long> implements DeviceDAO {
 	
 	@Override

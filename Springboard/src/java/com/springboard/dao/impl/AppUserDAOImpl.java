@@ -3,10 +3,12 @@ package com.springboard.dao.impl;
 import java.util.List;
 
 import org.hibernate.Query;
+import org.springframework.stereotype.Component;
 
 import com.springboard.dao.specs.AppUserDAO;
 import com.springboard.entities.AppUser;
 
+@Component
 public class AppUserDAOImpl extends GenericDAOImpl<AppUser, Long> implements AppUserDAO {
 	
 	public AppUser findByEmail(String email) {

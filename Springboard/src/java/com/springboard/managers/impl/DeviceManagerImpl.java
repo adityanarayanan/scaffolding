@@ -3,12 +3,14 @@ package com.springboard.managers.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.springboard.dao.specs.DeviceDAO;
 import com.springboard.entities.Device;
 import com.springboard.managers.specs.DeviceManager;
 
+@Service
 public class DeviceManagerImpl implements DeviceManager {
 	
 	@Autowired
